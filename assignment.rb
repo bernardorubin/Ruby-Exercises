@@ -76,15 +76,16 @@ book.chapters
 ################################################################################
 
 def is_prime(num)
+  num = num.to_i
   if num >1
       coincidences = 0
       2.upto(num) do |prime|
-        # puts "#{num} -> num / #{prime} -> prime = #{num % prime}"
+        #puts "#{num} -> num / #{prime} -> prime = #{num % prime}"
         if num % prime == 0
           coincidences += 1
         end
       end
-    if coincidences >2
+    if coincidences >=2
       false
     else
       true
@@ -98,6 +99,9 @@ p is_prime(197)
 p is_prime(198)
 p is_prime(0)
 p is_prime(1)
+p is_prime(2)
+p is_prime(3)
+p is_prime(4)
 
 ################################################################################
 # Question 4
