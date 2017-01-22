@@ -75,8 +75,9 @@ book.chapters
 # Write a Ruby method called: is_prime. The function must take a number n and it should return true or false whether the argument passed (n) is a prime number or not. A prime number is a number that is divisible only by 1 and itself.
 ################################################################################
 
+
 def is_prime(num)
-  num = num.to_i
+  if num.is_a? Integer
   if num >1
       coincidences = 0
       2.upto(num) do |prime|
@@ -93,6 +94,9 @@ def is_prime(num)
   else
     false
   end
+else
+  "That isn't an integer."
+end
 end
 
 p is_prime(197)
@@ -100,6 +104,7 @@ p is_prime(198)
 p is_prime(0)
 p is_prime(1)
 p is_prime(2)
+p is_prime(2.5)
 p is_prime(3)
 p is_prime(4)
 
